@@ -28,3 +28,10 @@ AddEventHandler('CheckMoneyForWea', function(weapon,price)
 		end
 	end)
 end)
+
+RegisterServerEvent("weaponshop:playerSpawned")
+AddEventHandler("weaponshop:playerSpawned", function(spawn)
+	TriggerEvent('es:getPlayerFromId', source, function(user)
+		user:setNbWeapons(0)
+	end)
+end)
