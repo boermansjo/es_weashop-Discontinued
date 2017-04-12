@@ -1,14 +1,15 @@
 # es_weashop
 
-This is the weapon resource based on the vehicle shop from https://github.com/FiveM-Scripts  !! Warning, they merged different shops into the gamemode. I will have to update this...
+This is the weapon resource based on the vehicle shop from https://github.com/FiveM-Scripts 
+======They merged different shops into the gamemode. I will have to update this======
 Warning : All the text is in French. But the shop menu has been changed so that the developers can change the language easily.
 
-## Changelog (30-3-2017)
-
-- [X] Spend your cash on a vehicle.
-- [X] Save your vehicle to the database
-- [X] Allow the player to spawn the vehicle with the command /pv.
-
+## What does this mod ?
+This mod creates a weapon shop in a not so usual place.
+The player can buy up to 6 weapons in total. (Can be changed)
+Since we are making a RP server, all weapons are not stored. So when you are dead or logout, you lose all the weapons.
+Why ? Because we want the players to do missions first in order to buy weapons.
+But saving weapons shouldn't be that difficult. (My initial mod stored the weapons, but it didn't fit our server design.)
 
 ## Installation
 
@@ -19,8 +20,8 @@ Warning : All the text is in French. But the shop menu has been changed so that 
 
 Example : 
 
--- Meta table for users
-setmetatable(Player, {
+	-- Meta table for users
+	setmetatable(Player, {
 	__call = function(self, source, permission_level, money, identifier, iscop, group)
 		local pl = {}
 
@@ -36,7 +37,7 @@ setmetatable(Player, {
 
 		return setmetatable(pl, Player)
 	end
-})
+	})
 
 4. Restart your server
 5. Have fun.
