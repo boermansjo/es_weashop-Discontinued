@@ -23,9 +23,10 @@ Weapons are now stored in the database. When the player spawn ingame, the weapon
 1. Extract the folder and rename it to es_weashop
 2. Place the folder in your resource folder
 3. Add - es_weashop to your citmp-server.yml
-4. Run the sql.sql into your database
-4. Restart your server
-5. Have fun.
+4. Change the mysql connection in sv_weashop.lua
+5. Run the sql.sql into your database
+6. Restart your server
+7. Have fun.
 
 ## Setup
 
