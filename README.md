@@ -1,44 +1,41 @@
 # es_weashop
 
-This is the weapon resource based on the vehicle shop from https://github.com/FiveM-Scripts  !! Warning, they merged different shops into the gamemode. I will have to update this...
+This is the weapon resource based on the vehicle shop from https://github.com/FiveM-Scripts 
+
+======They merged different shops into the gamemode. I will have to update this======
+
 Warning : All the text is in French. But the shop menu has been changed so that the developers can change the language easily.
 
-## Changelog (30-3-2017)
+## What does this mod ?
+This mod creates a weapon shop in a not so usual place.
+The player can buy up to 6 weapons in total. (Can be changed)
 
-- [X] Spend your cash on a vehicle.
-- [X] Save your vehicle to the database
-- [X] Allow the player to spawn the vehicle with the command /pv.
+*NEW*
+Weapons are now stored in the database. When the player spawn ingame, the weapons are giving to the player.
 
+## Changelog (13-4-2017)
+
+- [X] Removed the changes needed in player.lua. Mod is now 100% copy/paste...
+- [X] Save all the weapons to the database
+- [X] Weapons are given back to the player when he dies or login.
+- [X] Getting weapons back from Roberto cost money. The cost is the price of the weapon/100. (Can be changed)
 
 ## Installation
 
 1. Extract the folder and rename it to es_weashop
 2. Place the folder in your resource folder
 3. Add - es_weashop to your citmp-server.yml
-4. Add "pl.nb_weapons = 0" into the player class of the Essential Mode.
-
-Example : 
-
--- Meta table for users
-setmetatable(Player, {
-	__call = function(self, source, permission_level, money, identifier, iscop, group)
-		local pl = {}
-
-		pl.source = source
-		pl.permission_level = permission_level
-		pl.money = money
-		pl.identifier = identifier
-		pl.iscop = iscop
-		pl.group = group
-		pl.nb_weapons = 0
-		pl.coords = {x = 0.0, y = 0.0, z = 0.0}
-		pl.session = {}
-
-		return setmetatable(pl, Player)
-	end
-})
-
 4. Restart your server
 5. Have fun.
+
+## Setup
+
+Changing the limit of weapons : 
+Open sv_weashop.lua and change the line :
+	local max_number_weapons = 6
+
+Change the cost of withdrawing the weapons :
+Open sv_weashop.lua and change the line :
+	local cost_ratio = 100
 
 Kindly made by Hoegarden31

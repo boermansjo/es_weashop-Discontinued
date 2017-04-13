@@ -1,6 +1,6 @@
 local weashop = {
 	opened = false,
-	title = "Achat d'armes",
+	title = "Weapon store",
 	currentmenu = "main",
 	lastmenu = nil,
 	currentpos = nil,
@@ -20,119 +20,134 @@ local weashop = {
 			title = "CATEGORIES",
 			name = "main",
 			buttons = {
-				{title = "Armes de melee", name = "Melee", description = ""},
+				{title = "Melee weapons", name = "Melee", description = ""},
 				{title = "Pistolets", name = "Pistolets", description = ""},
-				{title = "Mitraillettes", name = "MachineGuns", description = ""},
-				{title = "Fusils a pompe", name = "Shotguns", description = ""},
-				{title = "Fusils assaut", name = "AssaultRifles", description = ""},
-				{title = "Fusils sniper", name = "SniperRifles", description = ""},
-				{title = "Grenades", name = "ThrownWeapons", description = ""},
+				{title = "Machine guns", name = "MachineGuns", description = ""},
+				{title = "Shotgun", name = "Shotguns", description = ""},
+				{title = "Assault rifle", name = "AssaultRifles", description = ""},
+				{title = "Sniper rifle", name = "SniperRifles", description = ""},
+				{title = "Heavy Weapons", name = "HeavyWeapons", description = ""},
+				{title = "Thrown weapons", name = "ThrownWeapons", description = ""},
 			}
 		},
 		["Melee"] = {
-			title = "Armes de melee",
+			title = "Melee weapons",
 			name = "Melee",
 			buttons = {
-				{title = "Couteau", name = "Knife", costs = 155000, description = {}, model = "WEAPON_Knife"},
-				{title = "Matraque", name = "Nightstick", costs = 25000, description = {}, model = "WEAPON_Nightstick"},
-				{title = "Marteau", name = "Hammer", costs = 18000, description = {}, model = "WEAPON_HAMMER"},
-				{title = "Batte", name = "Bat", costs = 85000, description = {}, model = "WEAPON_Bat"},
-				{title = "Pied de biche", name = "Crowbar", costs = 30000, description = {}, model = "WEAPON_Crowbar"},
-				{title = "Club de golf", name = "Golfclub", costs = 120000, description = {}, model = "WEAPON_Golfclub"},
-				{title = "Bouteille", name = "Bottle", costs = 120000, description = {}, model = "WEAPON_Bottle"},
-				{title = "Poignard", name = "Dagger", costs = 120000, description = {}, model = "WEAPON_Dagger"},
-				{title = "Hachette", name = "Hatchet", costs = 120000, description = {}, model = "WEAPON_Hatchet"},
-				{title = "Poing americain", name = "KnuckleDuster", costs = 120000, description = {}, model = "WEAPON_KnuckleDuster"},
-				{title = "Machette", name = "Machete", costs = 30000, description = {}, model = "WEAPON_Machete"},
-				{title = "Lampe torche", name = "Flashlight", costs = 120000, description = {}, model = "WEAPON_Flashlight"},
-				{title = "Couteau de poche", name = "SwitchBlade", costs = 120000, description = {}, model = "WEAPON_SwitchBlade"},
-				{title = "Queue de billard", name = "Poolcue", costs = 120000, description = {}, model = "WEAPON_Poolcue"},
-				{title = "Cle anglaise", name = "Wrench", costs = 120000, description = {}, model = "WEAPON_Wrench"},
-				{title = "Hache de combat", name = "Battleaxe", costs = 120000, description = {}, model = "WEAPON_Battleaxe"},
+				{title = "Knife", name = "Knife", costs = 155000, description = {}, model = "WEAPON_Knife"},
+				{title = "Nightstick", name = "Nightstick", costs = 25000, description = {}, model = "WEAPON_Nightstick"},
+				{title = "Hammer", name = "Hammer", costs = 18000, description = {}, model = "WEAPON_HAMMER"},
+				{title = "Bat", name = "Bat", costs = 85000, description = {}, model = "WEAPON_Bat"},
+				{title = "Crowbar", name = "Crowbar", costs = 30000, description = {}, model = "WEAPON_Crowbar"},
+				{title = "Golfclub", name = "Golfclub", costs = 120000, description = {}, model = "WEAPON_Golfclub"},
+				{title = "Bottle", name = "Bottle", costs = 120000, description = {}, model = "WEAPON_Bottle"},
+				{title = "Dagger", name = "Dagger", costs = 120000, description = {}, model = "WEAPON_Dagger"},
+				{title = "Hatchet", name = "Hatchet", costs = 120000, description = {}, model = "WEAPON_Hatchet"},
+				{title = "KnuckleDuster", name = "KnuckleDuster", costs = 120000, description = {}, model = "WEAPON_KnuckleDuster"},
+				{title = "Machete", name = "Machete", costs = 30000, description = {}, model = "WEAPON_Machete"},
+				{title = "Flashlight", name = "Flashlight", costs = 120000, description = {}, model = "WEAPON_Flashlight"},
+				{title = "SwitchBlade", name = "SwitchBlade", costs = 120000, description = {}, model = "WEAPON_SwitchBlade"},
+				--{title = "Poolcue", name = "Poolcue", costs = 120000, description = {}, model = "WEAPON_Poolcue"},
+				--{title = "Wrench", name = "Wrench", costs = 120000, description = {}, model = "WEAPON_Wrench"},
+				--{title = "Battleaxe", name = "Battleaxe", costs = 120000, description = {}, model = "WEAPON_Battleaxe"},
 			}
 		},
 		["Pistolets"] = {
 			title = "Pistolets",
 			name = "Pistolets",
 			buttons = {
-				{title = "Pistolet", name = "Pistol", costs = 500, description = {}, model = "WEAPON_Pistol"},
-				{title = "Pistolet de combat", name = "CombatPistol", costs = 1000, description = {}, model = "WEAPON_CombatPistol"},
-				{title = "Pistolet Cal 50", name = "Pistol50", costs = 3000, description = {}, model = "WEAPON_PISTOL50"},
-				{title = "Pistolet SNS", name = "SNSPistol", costs = 5000, description = {}, model = "WEAPON_SNSPistol"},
-				{title = "Pistolet Lourd", name = "HeavyPistol", costs = 8000, description = {}, model = "WEAPON_HeavyPistol"},
-				{title = "Pistolet Vintage", name = "VintagePistol", costs = 15000, description = {}, model = "WEAPON_VintagePistol"},
-				{title = "Pistolet Marksman", name = "MarksmanPistol", costs = 2000, description = {}, model = "WEAPON_MarksmanPistol"},
+				{title = "Pistol", name = "Pistol", costs = 500, description = {}, model = "WEAPON_Pistol"},
+				{title = "Combat Pistol", name = "CombatPistol", costs = 1000, description = {}, model = "WEAPON_CombatPistol"},
+				{title = "Pistol Cal 50", name = "Pistol50", costs = 3000, description = {}, model = "WEAPON_PISTOL50"},
+				{title = "SNS Pistol", name = "SNSPistol", costs = 5000, description = {}, model = "WEAPON_SNSPistol"},
+				{title = "Heavy Pistol", name = "HeavyPistol", costs = 8000, description = {}, model = "WEAPON_HeavyPistol"},
+				{title = "Vintage Pistol", name = "VintagePistol", costs = 15000, description = {}, model = "WEAPON_VintagePistol"},
+				{title = "Marksman Pistol", name = "MarksmanPistol", costs = 2000, description = {}, model = "WEAPON_MarksmanPistol"},
 				{title = "Revolver", name = "Revolver", costs = 1900, description = {}, model = "WEAPON_Revolver"},
-				{title = "Pistolet AP", name = "APPistol", costs = 2700, description = {}, model = "WEAPON_APPistol"},
-				{title = "Pistolet paralysant", name = "StunGun", costs = 2800, description = {}, model = "WEAPON_StunGun"},
-				{title = "Pistolet de detresse", name = "FlareGun", costs = 2900, description = {}, model = "WEAPON_FlareGun"},
+				{title = "AP Pistol", name = "APPistol", costs = 2700, description = {}, model = "WEAPON_APPistol"},
+				{title = "Stun Gun", name = "StunGun", costs = 2800, description = {}, model = "WEAPON_StunGun"},
+				{title = "Flare Gun", name = "FlareGun", costs = 2900, description = {}, model = "WEAPON_FlareGun"},
 			}
 		},
 		["MachineGuns"] = {
-			title = "Mitraillettes",
+			title = "Machine guns",
 			name = "MachineGuns",
 			buttons = {
-				{title = "Mitraillette legere", name = "MicroSMG", costs = 15000, description = {}, model = "WEAPON_MicroSMG"},
-				{title = "Pistolet-mitrailleur", name = "MachinePistol", costs = 155000, description = {}, model = "WEAPON_MachinePistol"},
-				{title = "Mitraillette", name = "SMG", costs = 25000, description = {}, model = "WEAPON_SMG"},
-				{title = "Mitraillette d assaut", name = "AssaultSMG", costs = 18000, description = {}, model = "WEAPON_AssaultSMG"},
-				{title = "ADP de combat", name = "CombatPDW", costs = 85000, description = {}, model = "WEAPON_CombatPDW"},
-				{title = "Mitrailleuse", name = "MG", costs = 30000, description = {}, model = "WEAPON_MG"},
-				{title = "Mitrailleuse de Combat", name = "CombatMG", costs = 120000, description = {}, model = "WEAPON_CombatMG"},
-				{title = "Sulfateuse Gusenberg", name = "Gusenberg", costs = 120000, description = {}, model = "WEAPON_Gusenberg"},
-				{title = "Mini mitraillette", name = "MiniSMG", costs = 120000, description = {}, model = "WEAPON_MiniSMG"},
+				{title = "MicroSMG", name = "MicroSMG", costs = 15000, description = {}, model = "WEAPON_MicroSMG"},
+				{title = "Machine Pistol", name = "MachinePistol", costs = 155000, description = {}, model = "WEAPON_MachinePistol"},
+				{title = "SMG", name = "SMG", costs = 25000, description = {}, model = "WEAPON_SMG"},
+				{title = "Assault SMG", name = "AssaultSMG", costs = 18000, description = {}, model = "WEAPON_AssaultSMG"},
+				{title = "Combat PDW", name = "CombatPDW", costs = 85000, description = {}, model = "WEAPON_CombatPDW"},
+				{title = "MG", name = "MG", costs = 30000, description = {}, model = "WEAPON_MG"},
+				{title = "Combat MG", name = "CombatMG", costs = 120000, description = {}, model = "WEAPON_CombatMG"},
+				{title = "Gusenberg", name = "Gusenberg", costs = 120000, description = {}, model = "WEAPON_Gusenberg"},
+				{title = "Mini SMG", name = "MiniSMG", costs = 120000, description = {}, model = "WEAPON_MiniSMG"},
 			}
 		},
 		["Shotguns"] = {
-			title = "Fusils a pompe",
+			title = "Shotgun",
 			name = "Shotguns",
 			buttons = {
-				{title = "Fusil a pompe", name = "PumpShotgun", costs = 150000, description = {}, model = "WEAPON_PumpShotgun"},
-				{title = "Fusil a canon scie", name = "SawnoffShotgun", costs = 220000, description = {}, model = "WEAPON_SawnoffShotgun"},
-				{title = "Fusil a pompe Bullpup", name = "BullpupShotgun", costs = 250000, description = {}, model = "WEAPON_BullpupShotgun"},
-				{title = "Fusil a pompe lourd", name = "AssaultShotgun", costs = 280000, description = {}, model = "WEAPON_AssaultShotgun"},
+				{title = "Pump Shotgun", name = "PumpShotgun", costs = 150000, description = {}, model = "WEAPON_PumpShotgun"},
+				{title = "Sawn-off Shotgun", name = "SawnoffShotgun", costs = 220000, description = {}, model = "WEAPON_SawnoffShotgun"},
+				{title = "Bullpup Shotgun", name = "BullpupShotgun", costs = 250000, description = {}, model = "WEAPON_BullpupShotgun"},
+				{title = "Assault Shotgun", name = "AssaultShotgun", costs = 280000, description = {}, model = "WEAPON_AssaultShotgun"},
 				{title = "Musket", name = "Musket", costs = 850000, description = {}, model = "WEAPON_Musket"},
-				{title = "Fusil a pompe lourd", name = "HeavyShotgun", costs = 35000, description = {}, model = "WEAPON_HeavyShotgun"},
-				{title = "Fusil à pompe compact", name = "DoubleBarrelShotgun", costs = 400000, description = {}, model = "WEAPON_DoubleBarrelShotgun"},
-				{title = "Fusil a pompe d assaut", name = "Autoshotgun", costs = 450000, description = {}, model = "WEAPON_Autoshotgun"},
+				{title = "Heavy Shotgun", name = "HeavyShotgun", costs = 35000, description = {}, model = "WEAPON_HeavyShotgun"},
+				{title = "Double-Barrel Shotgun", name = "DoubleBarrelShotgun", costs = 400000, description = {}, model = "WEAPON_DoubleBarrelShotgun"},
+				{title = "Auto Shotgun", name = "Autoshotgun", costs = 450000, description = {}, model = "WEAPON_Autoshotgun"},
 			}
 		},
 		["AssaultRifles"] = {
-			title = "Fusils assaut",
+			title = "Assault Rifles",
 			name = "AssaultRifles",
 			buttons = {
-				{title = "Fusil Assaut", name = "AssaultRifle", costs = 250000, description = {}, model = "WEAPON_AssaultRifle"},
-				{title = "Carabine", name = "CarbineRifle", costs = 250000, description = {}, model = "WEAPON_CarbineRifle"},
-				{title = "Fusil ameliore", name = "AdvancedRifle", costs = 300000, description = {}, model = "WEAPON_AdvancedRifle"},
-				{title = "Carabine speciale", name = "SpecialCarbine", costs = 310000, description = {}, model = "WEAPON_SpecialCarbine"},
-				{title = "Fusil d'assaut Bullpup", name = "BullpupRifle", costs = 350000, description = {}, model = "WEAPON_BullpupRifle"},
-				{title = "Fusil compact", name = "CompactRifle", costs = 400000, description = {}, model = "WEAPON_CompactRifle"},
+				{title = "Assault Rifle", name = "AssaultRifle", costs = 250000, description = {}, model = "WEAPON_AssaultRifle"},
+				{title = "Carbine Rifle", name = "CarbineRifle", costs = 250000, description = {}, model = "WEAPON_CarbineRifle"},
+				{title = "Advanced Rifle", name = "AdvancedRifle", costs = 300000, description = {}, model = "WEAPON_AdvancedRifle"},
+				{title = "Special Carbine", name = "SpecialCarbine", costs = 310000, description = {}, model = "WEAPON_SpecialCarbine"},
+				{title = "Bullpup Rifle", name = "BullpupRifle", costs = 350000, description = {}, model = "WEAPON_BullpupRifle"},
+				{title = "FCompact Rifle", name = "CompactRifle", costs = 400000, description = {}, model = "WEAPON_CompactRifle"},
 			}
 		},
 		["SniperRifles"] = {
-			title = "Fusils sniper",
+			title = "Sniper Rifles",
 			name = "SniperRifles",
 			buttons = {
-				{title = "Fusil de precision", name = "SniperRifle", costs = 500000, description = {}, model = "WEAPON_SniperRifle"},
-				{title = "Fusil de precision lourd", name = "HeavySniper", costs = 800000, description = {}, model = "WEAPON_HeavySniper"},
-				{title = "Fusil a lunette", name = "MarksmanRifle", costs = 1000000, description = {}, model = "WEAPON_MarksmanRifle"},
+				{title = "Sniper Rifle", name = "SniperRifle", costs = 500000, description = {}, model = "WEAPON_SniperRifle"},
+				{title = "Heavy Sniper", name = "HeavySniper", costs = 800000, description = {}, model = "WEAPON_HeavySniper"},
+				{title = "Marksman Rifle", name = "MarksmanRifle", costs = 1000000, description = {}, model = "WEAPON_MarksmanRifle"},
+			}
+		},
+		["HeavyWeapons"] = {
+			title = "Heavy Weapons",
+			name = "HeavyWeapons",
+			buttons = {
+				{title = "Grenade Launcher", name = "GrenadeLauncher", costs = 500000, description = {}, model = "WEAPON_GrenadeLauncher"},
+				{title = "RPG", name = "RPG", costs = 800000, description = {}, model = "WEAPON_RPG"},
+				{title = "Minigun", name = "Minigun", costs = 1000000, description = {}, model = "WEAPON_Minigun"},
+				{title = "Firework", name = "Firework", costs = 1000000, description = {}, model = "WEAPON_Firework"},
+				{title = "Railgun", name = "Railgun", costs = 999999999, description = {}, model = "WEAPON_Railgun"},
+				{title = "Homing Launcher", name = "HomingLauncher", costs = 1000000, description = {}, model = "WEAPON_HomingLauncher"},
+				{title = "Smoke-grenade Launcher", name = "GrenadeLauncherSmoke", costs = 1000000, description = {}, model = "WEAPON_GrenadeLauncherSmoke"},
+				{title = "Compact Launcher", name = "CompactLauncher", costs = 1000000, description = {}, model = "WEAPON_CompactLauncher"},
 			}
 		},
 		["ThrownWeapons"] = {
-			title = "Grenades",
+			title = "Thrown Weapons",
 			name = "ThrownWeapons",
 			buttons = {
 				{title = "Grenade", name = "Grenade", costs = 1500, description = {}, model = "WEAPON_Grenade"},
-				{title = "Mine collante", name = "StickyBomb", costs = 15500, description = {}, model = "WEAPON_StickyBomb"},
-				{title = "Mine de proximite", name = "ProximityMine", costs = 250000, description = {}, model = "WEAPON_ProximityMine"},
-				{title = "Grenade lacrymogene", name = "BZGas", costs = 1800, description = {}, model = "WEAPON_BZGas"},
+				{title = "Sticky Bomb", name = "StickyBomb", costs = 15500, description = {}, model = "WEAPON_StickyBomb"},
+				{title = "Proximity Mine", name = "ProximityMine", costs = 250000, description = {}, model = "WEAPON_ProximityMine"},
+				{title = "BZ Gas", name = "BZGas", costs = 1800, description = {}, model = "WEAPON_BZGas"},
 				{title = "Molotov", name = "Molotov", costs = 85000, description = {}, model = "WEAPON_Molotov"},
-				{title = "Extincteur", name = "FireExtinguisher", costs = 3000, description = {}, model = "WEAPON_FireExtinguisher"},
-				{title = "Fuel", name = "PetrolCan", costs = 120000, description = {}, model = "WEAPON_PetrolCan"},
-				{title = "Torche eclairante", name = "Flare", costs = 12000, description = {}, model = "WEAPON_Flare"},
-				{title = "Balle", name = "Ball", costs = 120, description = {}, model = "WEAPON_Ball"},
-				{title = "Boule de neige", name = "Snowball", costs = 120, description = {}, model = "WEAPON_Snowball"},
-				{title = "Fumigene", name = "SmokeGrenade", costs = 12000, description = {}, model = "WEAPON_SmokeGrenade"},
+				{title = "Fire Extinguisher", name = "FireExtinguisher", costs = 3000, description = {}, model = "WEAPON_FireExtinguisher"},
+				{title = "Petrol Can", name = "PetrolCan", costs = 120000, description = {}, model = "WEAPON_PetrolCan"},
+				{title = "Flare", name = "Flare", costs = 12000, description = {}, model = "WEAPON_Flare"},
+				{title = "Ball", name = "Ball", costs = 120, description = {}, model = "WEAPON_Ball"},
+				{title = "Snowball", name = "Snowball", costs = 120, description = {}, model = "WEAPON_Snowball"},
+				{title = "Smoke Grenade", name = "SmokeGrenade", costs = 12000, description = {}, model = "WEAPON_SmokeGrenade"},
 				--{title = "Bombe artisanale", name = "Pipebomb", costs = 3000, description = {}, model = "WEAPON_Pipebomb"},
 			}
 		},
@@ -181,7 +196,7 @@ function ShowWeashopBlips(bool)
 			-- 60 58 137
 			SetBlipSprite(blip,110)
 			BeginTextCommandSetBlipName("STRING")
-			AddTextComponentString('Armurerie')
+			AddTextComponentString('Ammunation')
 			EndTextCommandSetBlipName(blip)
 			SetBlipAsShortRange(blip,true)
 			SetBlipAsMissionCreatorBlip(blip,true)
@@ -259,7 +274,6 @@ function CloseCreator()
 			weashop.menu.from = 1
 			weashop.menu.to = 10
 		else
-			--Citizen.Trace("Weapon"..fakeWeapon)
 			local pos = currentlocation.pos.entering
 			local hash = GetHashKey(fakeWeapon)
 			GiveWeaponToPed(ped, hash, 1000, 0, false)
@@ -448,6 +462,8 @@ function ButtonSelected(button)
 			OpenMenu('AssaultRifles')
 		elseif btn == "SniperRifles" then
 			OpenMenu('SniperRifles')
+		elseif btn == "HeavyWeapons" then
+			OpenMenu('HeavyWeapons')
 		elseif btn == "ThrownWeapons" then
 			OpenMenu('ThrownWeapons')
 		end
@@ -467,10 +483,6 @@ RegisterNetEvent('ToManyWeapons')
 AddEventHandler('ToManyWeapons', function()
 	boughtWeapon = false
 	CloseCreator()
-end)
-
-AddEventHandler("playerSpawned", function(spawn)
-    TriggerServerEvent("weaponshop:playerSpawned", spawn)
 end)
 
 function OpenMenu(menu)
@@ -505,13 +517,15 @@ if firstspawn == 0 then
 	ShowWeashopBlips(true)
 	firstspawn = 1
 end
+TriggerServerEvent("weaponshop:playerSpawned", spawn)
 end)
 
-RegisterNetEvent('weashop:giveWeapon')
-AddEventHandler('weashop:giveWeapon', function(v)
-	local weapon = GetHashKey(v)
-	local playerPed = GetPlayerPed(-1)
-	if playerPed and playerPed ~= -1 then
-		GiveWeaponToPed(GetPlayerPed(-1), weapon, 1000, 0, false)
-	end
+RegisterNetEvent('giveWeapon')
+AddEventHandler('giveWeapon', function(name, delay)
+	Citizen.CreateThread(function()
+		local weapon = GetHashKey(name)
+        Wait(delay)
+        local hash = GetHashKey(name)
+        GiveWeaponToPed(GetPlayerPed(-1), weapon, 1000, 0, false)
+    end)
 end)
