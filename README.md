@@ -23,6 +23,8 @@ But saving weapons shouldn't be that difficult. (My initial mod stored the weapo
 4. Add "pl.nb_weapons = 0" into the player class of the Essential Mode.
 5. Add GET AND SET function in the player.lua : 
 
+Code : 
+
 	-- Getting number of weapons
 	function Player:getNbWeapons()
 		return self.nb_weapons
