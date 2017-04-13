@@ -21,6 +21,17 @@ But saving weapons shouldn't be that difficult. (My initial mod stored the weapo
 2. Place the folder in your resource folder
 3. Add - es_weashop to your citmp-server.yml
 4. Add "pl.nb_weapons = 0" into the player class of the Essential Mode.
+5. Add GET AND SET function in the player.lua : 
+
+	-- Getting number of weapons
+	function Player:getNbWeapons()
+		return self.nb_weapons
+	end
+
+	-- Getting number of weapons
+	function Player:setNbWeapons(p)
+		self.nb_weapons = p
+	end
 
 Example : 
 
@@ -43,7 +54,7 @@ Example :
 	end
 	})
 
-4. Restart your server
-5. Have fun.
+6. Restart your server
+7. Have fun.
 
 Kindly made by Hoegarden31
